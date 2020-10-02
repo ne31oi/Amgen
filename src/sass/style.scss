@@ -425,6 +425,7 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     background-attachment: fixed;
+
 }
 
 .menu {
@@ -958,7 +959,7 @@ ul {
     width: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .onlypc {
         display: none;
     }
@@ -973,11 +974,14 @@ ul {
         margin-top: 88px;
         position: relative;
         z-index: 2;
+        margin-bottom: 88px;
+
     }
 
     body {
-        align-items: flex-start;
-        padding-bottom: 88px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .main_form .header {
@@ -1023,6 +1027,7 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 50px;
     }
 
     .mobile_container {
@@ -1040,6 +1045,8 @@ ul {
         flex-wrap: wrap;
         justify-content: center;
         height: auto;
+        position: relative;
+        bottom: -20px;
     }
 
     .partners a {
@@ -1054,16 +1061,25 @@ ul {
 
     .main_header {
         width: 100%;
-        left: 0;
         text-align: center;
+        position: relative;
         z-index: 10;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 88px;
+        overflow: hidden;
+        min-height: calc(100vh - 290px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .main_header .btn_reg {
         margin: 0 auto;
-        font-size: 15px;
+        font-size: 18px;
         line-height: 17px;
-        padding: 6px 16px;
+        padding: 8px 18px;
     }
 
     .main_header .date {
@@ -1073,7 +1089,11 @@ ul {
 
     .main_header .main_logo {
         height: 46px;
-        margin: 37px 0;
+        margin: 25px 0;
+    }
+
+    .main_form.page2 {
+        display: none;
     }
 
     .mobile_menu_item {
@@ -1086,25 +1106,31 @@ ul {
         margin-bottom: 13px;
         margin-top: 13px;
     }
-.back{
-  left: 42px;
-}.main_form.page5{
-  padding: 100px 42px; 
-  margin-bottom:  0;
-}
+
+    .back {
+        left: 42px;
+    }
+
+    .main_form.page5 {
+        padding: 100px 42px;
+    }
+
+    .ru {
+        display: none;
+    }
+
     .close_menu_btn,
     .mobile_menu_item {
         z-index: 3;
     }
-.block1{
-  flex-wrap: wrap;
-}
-.main_form.page5 .block1 .left, .main_form.page5 .block1 .right{
-  width: 100%;
-}
-    .main_form.page3,
-    .main_form.page4 {
-        margin-bottom:  0;
+
+    .block1 {
+        flex-wrap: wrap;
+    }
+
+    .main_form.page5 .block1 .left,
+    .main_form.page5 .block1 .right {
+        width: 100%;
     }
 
     .close_menu_btn {

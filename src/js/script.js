@@ -44,6 +44,7 @@ $(document).ready(function() {
     $('.btn_form').on('click', function() {
         document.location.href = "/page6.html";
     });
+    var orient = {}
     $('.menu_btn').on('click', function() {
         $('.menu_mobile').css("display", "flex");
         $('.mobile_container').css("z-index", "11");
@@ -55,6 +56,12 @@ $(document).ready(function() {
         $('.mobile_container').css("position", "absolute");
     });
     $('.mobile_container').css("height", document.body.clientHeight + "px");
+    if ($('.page2')[0]) {
+        $('body').css("padding-bottom", "0");
+    } else {
 
-
+    }
+    window.addEventListener("orientationchange", function() {
+        setTimeout(function() { $('.mobile_container').css("height", document.body.clientHeight + "px"); }, 100);
+    }, false);
 });
