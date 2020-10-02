@@ -1,17 +1,41 @@
+.gradient_bg
 .bg
     <video autoplay muted loop id="myVideo">
         <source src="video/bg.webm" type="video/webm">
     </video>
-<svg width="0" height="0" style="position: absolute; z-index: -9999; opacity: 0">
-  <defs>
-    <filter id="f1" x="0" y="0">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-        <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
-    <feComposite in2='SourceGraphic' operator='in'></feComposite>
-    </filter>
-    <clipPath id="clip-path" clipPathUnits="objectBoundingBox" filter='url("#f1")'>
-       <circle cx="2" cy=".5" r="2" />
-
-    </clipPath>
-  </defs>
-</svg>
+.main_form
+    .ru RU-ARA-0920-00001
+    h2.header Здравствуйте!
+    .subheader Являетесь ли вы специалистом здравоохранения? 
+    a(href="page2.html").big_btn#big_btn_spec
+        .left
+            img(src='img/spec.svg')
+        .right
+            .top Да я являюсь специалистом!
+            .bot Продолжить регистрацию на онлайн конференцию
+    .big_btn#big_btn_nospec
+        .left
+            img(src='img/nospec.svg')
+        .right
+            .top Нет! Я не являюсь специалистом
+            .bot Вернуться назад на сайт онлайн конференции
+.onlymobile.mobile_container
+    
+    .menu_mobile
+        .gradient_bg
+        .bg
+            <video autoplay muted loop id="myVideo">
+                <source src="video/bg.webm" type="video/webm">
+            </video>
+        .close_menu_btn
+            img(src='img/close.svg')
+        a(href="page2.html").mobile_menu_item Главная
+        a(href="page3.html").mobile_menu_item Регистрация
+        a(href="page4.html").mobile_menu_item Помощь
+        a(href="page5.html").mobile_menu_item Контакты
+    .menu_btn
+        img(src='img/menu.svg')
+    .logo_top
+        img(src='img/logo.svg')
+    .logo_bot
+        img(src='img/mainlogo.svg')

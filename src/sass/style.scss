@@ -2,16 +2,912 @@
 @import "includes/bs-grid/grid";
 @import "includes/variables";
 
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-ThinItalic.eot');
+    src: local('TT Commons Thin Italic'), local('../fonts/TTCommons-ThinItalic'),
+        url('../fonts/TTCommons-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-ThinItalic.woff') format('woff'),
+        url('../fonts/TTCommons-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-Light.eot');
+    src: local('TT Commons Light'), local('../fonts/TTCommons-Light'),
+        url('../fonts/TTCommons-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-Light.woff') format('woff'),
+        url('../fonts/TTCommons-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-Black.eot');
+    src: local('TT Commons Black'), local('../fonts/TTCommons-Black'),
+        url('../fonts/TTCommons-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-Black.woff') format('woff'),
+        url('../fonts/TTCommons-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-Medium.eot');
+    src: local('TT Commons Medium'), local('../fonts/TTCommons-Medium'),
+        url('../fonts/TTCommons-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-Medium.woff') format('woff'),
+        url('../fonts/TTCommons-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-Italic.eot');
+    src: local('TT Commons Italic'), local('../fonts/TTCommons-Italic'),
+        url('../fonts/TTCommons-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-Italic.woff') format('woff'),
+        url('../fonts/TTCommons-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-Regular.eot');
+    src: local('TT Commons Regular'), local('../fonts/TTCommons-Regular'),
+        url('../fonts/TTCommons-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-Regular.woff') format('woff'),
+        url('../fonts/TTCommons-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-BlackItalic.eot');
+    src: local('TT Commons Black Italic'), local('../fonts/TTCommons-BlackItalic'),
+        url('../fonts/TTCommons-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-BlackItalic.woff') format('woff'),
+        url('../fonts/TTCommons-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-ExtraBold.eot');
+    src: local('TT Commons ExtraBold'), local('../fonts/TTCommons-ExtraBold'),
+        url('../fonts/TTCommons-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-ExtraBold.woff') format('woff'),
+        url('../fonts/TTCommons-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-BoldItalic.eot');
+    src: local('TT Commons Bold Italic'), local('../fonts/TTCommons-BoldItalic'),
+        url('../fonts/TTCommons-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-BoldItalic.woff') format('woff'),
+        url('../fonts/TTCommons-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-DemiBoldItalic.eot');
+    src: local('TT Commons DemiBold Italic'), local('../fonts/TTCommons-DemiBoldItalic'),
+        url('../fonts/TTCommons-DemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-DemiBoldItalic.woff') format('woff'),
+        url('../fonts/TTCommons-DemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-Bold.eot');
+    src: local('TT Commons Bold'), local('../fonts/TTCommons-Bold'),
+        url('../fonts/TTCommons-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-Bold.woff') format('woff'),
+        url('../fonts/TTCommons-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-ExtraLight.eot');
+    src: local('TT Commons ExtraLight'), local('../fonts/TTCommons-ExtraLight'),
+        url('../fonts/TTCommons-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-ExtraLight.woff') format('woff'),
+        url('../fonts/TTCommons-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-DemiBold.eot');
+    src: local('TT Commons DemiBold'), local('../fonts/TTCommons-DemiBold'),
+        url('../fonts/TTCommons-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-DemiBold.woff') format('woff'),
+        url('../fonts/TTCommons-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-ExtraLightItalic.eot');
+    src: local('TT Commons ExtraLight Italic'), local('../fonts/TTCommons-ExtraLightItalic'),
+        url('../fonts/TTCommons-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-ExtraLightItalic.woff') format('woff'),
+        url('../fonts/TTCommons-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-ExtraBoldItalic.eot');
+    src: local('TT Commons ExtraBold Italic'), local('../fonts/TTCommons-ExtraBoldItalic'),
+        url('../fonts/TTCommons-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-ExtraBoldItalic.woff') format('woff'),
+        url('../fonts/TTCommons-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-MediumItalic.eot');
+    src: local('TT Commons Medium Italic'), local('../fonts/TTCommons-MediumItalic'),
+        url('../fonts/TTCommons-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-MediumItalic.woff') format('woff'),
+        url('../fonts/TTCommons-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-LightItalic.eot');
+    src: local('TT Commons Light Italic'), local('../fonts/TTCommons-LightItalic'),
+        url('../fonts/TTCommons-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-LightItalic.woff') format('woff'),
+        url('../fonts/TTCommons-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('../fonts/TTCommons-Thin.eot');
+    src: local('TT Commons Thin'), local('../fonts/TTCommons-Thin'),
+        url('../fonts/TTCommons-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTCommons-Thin.woff') format('woff'),
+        url('../fonts/TTCommons-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-BoldItalic.eot');
+    src: local('Inter Bold Italic'), local('../fonts/Inter-BoldItalic'),
+        url('../fonts/Inter-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Inter-BoldItalic.woff') format('woff'),
+        url('../fonts/Inter-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-MediumItalic.eot');
+    src: local('Inter Medium Italic'), local('../fonts/Inter-MediumItalic'),
+        url('../fonts/Inter-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Inter-MediumItalic.woff') format('woff'),
+        url('../fonts/Inter-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ThinItalicBETA.eot');
+    src: local('Inter Thin Italic BETA'), local('../fonts/Inter-ThinItalicBETA'),
+        url('../fonts/Inter-ThinItalicBETA.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-ThinItalicBETA.woff2') format('woff2'),
+        url('../fonts/Inter-ThinItalicBETA.woff') format('woff'),
+        url('../fonts/Inter-ThinItalicBETA.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.eot');
+    src: local('Inter Regular'), local('../fonts/Inter-Regular'),
+        url('../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff'),
+        url('../fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Black.eot');
+    src: local('Inter Black'), local('../fonts/Inter-Black'),
+        url('../fonts/Inter-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Black.woff2') format('woff2'),
+        url('../fonts/Inter-Black.woff') format('woff'),
+        url('../fonts/Inter-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-BlackItalic.eot');
+    src: local('Inter Black Italic'), local('../fonts/Inter-BlackItalic'),
+        url('../fonts/Inter-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Inter-BlackItalic.woff') format('woff'),
+        url('../fonts/Inter-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-LightBETA.eot');
+    src: local('Inter Light BETA'), local('../fonts/Inter-LightBETA'),
+        url('../fonts/Inter-LightBETA.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-LightBETA.woff2') format('woff2'),
+        url('../fonts/Inter-LightBETA.woff') format('woff'),
+        url('../fonts/Inter-LightBETA.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBold.eot');
+    src: local('Inter Semi Bold'), local('../fonts/Inter-SemiBold'),
+        url('../fonts/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+        url('../fonts/Inter-SemiBold.woff') format('woff'),
+        url('../fonts/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ExtraBoldItalic.eot');
+    src: local('Inter Extra Bold Italic'), local('../fonts/Inter-ExtraBoldItalic'),
+        url('../fonts/Inter-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/Inter-ExtraBoldItalic.woff') format('woff'),
+        url('../fonts/Inter-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.eot');
+    src: local('Inter Bold'), local('../fonts/Inter-Bold'),
+        url('../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Bold.woff2') format('woff2'),
+        url('../fonts/Inter-Bold.woff') format('woff'),
+        url('../fonts/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ExtraLightItalicBETA.eot');
+    src: local('Inter Extra Light Italic BETA'), local('../fonts/Inter-ExtraLightItalicBETA'),
+        url('../fonts/Inter-ExtraLightItalicBETA.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-ExtraLightItalicBETA.woff2') format('woff2'),
+        url('../fonts/Inter-ExtraLightItalicBETA.woff') format('woff'),
+        url('../fonts/Inter-ExtraLightItalicBETA.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ExtraLightBETA.eot');
+    src: local('Inter Extra Light BETA'), local('../fonts/Inter-ExtraLightBETA'),
+        url('../fonts/Inter-ExtraLightBETA.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-ExtraLightBETA.woff2') format('woff2'),
+        url('../fonts/Inter-ExtraLightBETA.woff') format('woff'),
+        url('../fonts/Inter-ExtraLightBETA.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ExtraBold.eot');
+    src: local('Inter Extra Bold'), local('../fonts/Inter-ExtraBold'),
+        url('../fonts/Inter-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Inter-ExtraBold.woff') format('woff'),
+        url('../fonts/Inter-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ThinBETA.eot');
+    src: local('Inter Thin BETA'), local('../fonts/Inter-ThinBETA'),
+        url('../fonts/Inter-ThinBETA.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-ThinBETA.woff2') format('woff2'),
+        url('../fonts/Inter-ThinBETA.woff') format('woff'),
+        url('../fonts/Inter-ThinBETA.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-LightItalicBETA.eot');
+    src: local('Inter Light Italic BETA'), local('../fonts/Inter-LightItalicBETA'),
+        url('../fonts/Inter-LightItalicBETA.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-LightItalicBETA.woff2') format('woff2'),
+        url('../fonts/Inter-LightItalicBETA.woff') format('woff'),
+        url('../fonts/Inter-LightItalicBETA.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Italic.eot');
+    src: local('Inter Italic'), local('../fonts/Inter-Italic'),
+        url('../fonts/Inter-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Italic.woff2') format('woff2'),
+        url('../fonts/Inter-Italic.woff') format('woff'),
+        url('../fonts/Inter-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBoldItalic.eot');
+    src: local('Inter Semi Bold Italic'), local('../fonts/Inter-SemiBoldItalic'),
+        url('../fonts/Inter-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Inter-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/Inter-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.eot');
+    src: local('Inter Medium'), local('../fonts/Inter-Medium'),
+        url('../fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff'),
+        url('../fonts/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 body {
     background: #14153F;
+    background-image: url(../img/bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.menu {
+    position: absolute;
+    top: 120px;
+    left: 160px;
+
+    a {
+        font-family: TT Commons;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        margin-right: 46px;
+        color: #fff;
+    }
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label {
+    font-family: TT Commons;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    margin-top: -5px;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+    background-color: #e9ecef;
+}
+
+.btn_form {
+    font-family: TT Commons;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 20px;
+    background: #1565D8;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.main_header {
+    position: absolute;
+    left: 160px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+
+    .date {
+        font-family: TT Commons;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 89%;
+        color: #FFFFFF;
+    }
+
+    .main_logo {
+        height: 135px;
+        margin: 55px 0;
+    }
+
+    .btn_reg {
+        padding: 10px 30px;
+        font-family: TT Commons;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+        display: flex;
+        color: #FFFFFF;
+        width: max-content;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.back {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    font-family: TT Commons;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.main_form.page6 {
+    width: auto;
+    padding: 60px 60px;
+    padding-top: 120px;
+
+    .back {
+        left: 60px;
+    }
+}
+
+.main_form.page5 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: TT Commons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 120px 100px;
+
+    .block1 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .left,
+        .right {
+            width: 45%;
+        }
+    }
+
+    .block2 {
+        .left {
+            width: 100%;
+
+            h3 {
+                width: 45%;
+            }
+        }
+
+        span.sel {
+            position: relative;
+            font-weight: bold;
+        }
+
+        span.sel:after {
+            position: absolute;
+            content: '';
+            left: -13px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #FFFFFF;
+        }
+    }
+
+    .block3 {
+        padding: 16px;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+    }
+
+    .footer {
+        margin-top: 32px;
+    }
+}
+
+h3 {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 15px;
+}
+
+.main_form.page3,
+.main_form.page4 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    .header {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .subheader {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    hr {
+        border: 0;
+        width: 100%;
+        height: 1px;
+        background: #F5F5F5;
+    }
+}
+
+.input_label {
+    display: flex;
+    flex-direction: column;
+    font-family: TT Commons;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-top: 30px;
+
+    textarea {
+        height: 200px;
+        resize: none;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        background: transparent;
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #DBDBDB;
+        padding: 15px 30px;
+        border: 1px solid #005EFF;
+        border-radius: 6px;
+        margin-top: 13px;
+
+        &:focus {
+            background: #FFFFFF;
+            border: 1px solid #1565D8;
+            box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);
+            color: #DBDBDB;
+        }
+    }
+}
+
+.partners {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    width: 100%;
+    display: flex;
+    height: 43px;
+    transform: translateX(-50%);
+    justify-content: center;
+
+    a {
+        height: 100%;
+        display: flex;
+        margin: 5px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.main_form.page2 {
+    background: transparent;
+    pointer-events: none;
+
+    .header,
+    .subheader,
+    .big_btn {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.gradient_bg {
+    width: 34%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg, rgba(13, 0, 91, 0.8) 0%, rgba(12, 0, 83, 0) 100%);
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main_form {
+    width: 64%;
+    padding: 120px 250px;
+    background: rgba(6, 8, 11, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 920px;
+    position: relative;
+
+    .ru {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 44px);
+        font-family: TT Commons;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .header {
+        font-family: TT Commons;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+        margin: 10px 0;
+    }
+
+    .subheader {
+        font-family: TT Commons;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #fff;
+        margin-bottom: 35px;
+    }
+}
+
+.big_btn:not(:last-child) {
+    margin-bottom: 28px;
+}
+
+#big_btn_spec:after {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/arrow-right.svg);
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.big_btn {
+    cursor: pointer;
+    background: #F5F9FF;
+    border: 1px solid #1565D8;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+    display: flex;
+    padding: 28px;
+    align-items: center;
+    position: relative;
+
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        flex-shrink: 0;
+        margin-right: 28px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+
+        .top {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: left;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .bot {
+            font-family: Inter;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: left;
+            color: #8692A6;
+        }
+    }
 }
 
 .bg {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 50%;
-    left: 50%;
+    left: 70%;
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
@@ -22,7 +918,12 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        clip-path: url(#clip-path);
+        -webkit-mask-image: -webkit-gradient(linear, right center, left center,
+            color-stop(0.00, rgba(0, 0, 0, 1)),
+            color-stop(0.35, rgba(0, 0, 0, 1)),
+            color-stop(0.50, rgba(0, 0, 0, 1)),
+            color-stop(0.55, rgba(0, 0, 0, 1)),
+            color-stop(1.00, rgba(0, 0, 0, 0)));
     }
 }
 
@@ -30,11 +931,6 @@ h1 {
     font-weight: 300;
     text-align: center;
     font-size: 60px;
-}
-
-div {
-    text-align: center;
-    min-height: 50vh;
 }
 
 ul {
@@ -54,6 +950,199 @@ ul {
     margin-bottom: 0;
 }
 
+.onlymobile {
+    display: none;
+}
+
 .avatar {
     width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .onlypc {
+        display: none;
+    }
+
+    .onlymobile {
+        display: block;
+    }
+
+    .main_form {
+        width: 100%;
+        padding: 100px 42px;
+        margin-top: 88px;
+        position: relative;
+        z-index: 2;
+    }
+
+    body {
+        align-items: flex-start;
+        padding-bottom: 88px;
+    }
+
+    .main_form .header {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .main_form .subheader {
+        font-size: 12px;
+        line-height: 120%;
+    }
+
+    .big_btn {
+        padding: 19px;
+    }
+
+    .big_btn .left {
+        width: 35px;
+        margin-right: 19px;
+    }
+
+    .big_btn .right .top {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .big_btn .right .bot {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .menu_mobile {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        background: #14153F;
+        background-image: url(../img/bg.png);
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-attachment: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile_container {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .partners {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+
+    .partners a {
+        height: 25px;
+        margin-bottom: 20px;
+        width: 83px;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    .main_header {
+        width: 100%;
+        left: 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .main_header .btn_reg {
+        margin: 0 auto;
+        font-size: 15px;
+        line-height: 17px;
+        padding: 6px 16px;
+    }
+
+    .main_header .date {
+        font-size: 32px;
+        line-height: 89%;
+    }
+
+    .main_header .main_logo {
+        height: 46px;
+        margin: 37px 0;
+    }
+
+    .mobile_menu_item {
+        font-family: TT Commons;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-bottom: 13px;
+        margin-top: 13px;
+    }
+.back{
+  left: 42px;
+}.main_form.page5{
+  padding: 100px 42px; 
+  margin-bottom:  0;
+}
+    .close_menu_btn,
+    .mobile_menu_item {
+        z-index: 3;
+    }
+.block1{
+  flex-wrap: wrap;
+}
+.main_form.page5 .block1 .left, .main_form.page5 .block1 .right{
+  width: 100%;
+}
+    .main_form.page3,
+    .main_form.page4 {
+        margin-bottom:  0;
+    }
+
+    .close_menu_btn {
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+
+    .menu_btn,
+        {
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .logo_top {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 27px;
+        z-index: 10;
+    }
+
+    #big_btn_spec:after {
+        right: 10px;
+    }
+
+    .logo_bot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 27px;
+        height: 32px;
+
+        img {
+            height: 100%;
+        }
+    }
 }
